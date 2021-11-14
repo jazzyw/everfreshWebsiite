@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" <!-- link to CSS -- />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>EverFresh Eatery</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <h1 class="logo"><a href="#">EverFresh Eatery</a></h1>
+      <ul class="main-nav">
+        <li><a class="scroll_to" href="index.html">Home</a></li>
+        <li><a class="scroll_to" href="#imageGal">Gallery</a></li>
+        <!-- <li><a class="scroll_to" data-link="gallery">Gallery</a></li> -->
+        <li><a class="scroll_to" href="#aboutMe">About Me</a></li>
+        <!-- <li><a class="scroll_to" data-link="aboutMe">About Me</a></li> -->
+        <li><a class="scroll_to" href="#contactForm">Contact</a></li>
+        <!-- <li><a class="scroll_to" data-link="contactForm">Contact</a></li> -->
+      </ul>
+    </header>
+
+    <main>
+      <img
+        id="restaurantImg"
+        src="images/Restaurant.jpg"
+        alt="EverFresh Eatery restaurant"
+        width="100%"
+      />
+
+      <div class="section">
+        <!-- TODO: teach fancy transition -->
+        <h1 class="fancy">EverFresh Eatery</h1>
+        <p>
+          EverFresh Eatery is a local delicacy. Each food item is brought in
+          everyday to ensure the freshest ingredients. We pride ourselves in
+          providing the best service to our customers and making their dining
+          experience out of this world. We'd love for you to stop by and enjoy
+          all that EverFresh Eatery has to offer!
+        </p>
+      </div>
+
+      <div class="section" id="imageGal">
+        <div class="container">
+          <h1>Food Image Gallery</h1>
+          <div id="gallery"></div>
+        </div>
+        <div id="popup">
+          <img src="" alt="" id="selectedImage" />
+        </div>
+      </div>
+
+      <div id="aboutMe" class="section">
+        <h1>About Me</h1>
+        <div class="flex">
+          <img id="chef" src="images/Chef.jpg" alt="Chef Bay" />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+            laborum sunt voluptatum voluptate. Voluptate labore obcaecati aut
+            voluptatibus laudantium magnam, vitae ducimus atque, deserunt,
+            itaque iste enim animi autem dicta.
+          </p>
+        </div>
+      </div>
+
+      <div class="visit align-right slide-in">
+        <div class="inline">
+          <h2>Come Visit Us!</h2>
+          <button class="close">X</button>
+        </div>
+        <p>We're located at 1234 Main Street, Everfresh, MI, 12345</p>
+      </div>
+
+      <div id="contactForm" class="section">
+        <!-- TODO: switch to Contact Us -->
+        <h1>Contact Us</h1>
+        <p>We'd love to hear from you! Please send us a message!</p>
+
+        <!-- keeping all inputs together so when you submit all the information gets sent -->
+        <form>
+          <div class="form-group">
+            <label>Full Name</label>
+            <input
+              name="name"
+              class=""
+              placeholder="Your first and last name"
+            />
+            <div class="error-hint hidden">Your name is required</div>
+          </div>
+
+          <div class="form-group">
+            <label>Email</label>
+            <input
+              name="email"
+              class=""
+              placeholder="Your email"
+            />
+            <div class="error-hint hidden">Your email is invalid</div>
+          </div>
+
+          <div class="form-group">
+            <label>Phone</label>
+            <input
+              name="phone"
+              class=""
+              placeholder="Your phone number"
+            />
+            <div class="error-hint hidden">Your phone number is invalid</div>
+          </div>
+
+          <div class="form-group">
+            <label>Message</label>
+            <textarea
+              name="message"
+              class=""
+              placeholder="Your message"
+            ></textarea>
+            <div class="error-hint hidden">Your message is required</div>
+          </div>
+
+          <button>Submit Form</button>
+        </form>
+
+        <div class="thank-you hidden">
+            Thank you for your feedback!
+        </div>
+      </div>
+
+
+
+    </main>
+
+    <footer></footer>
+
+    <!-- link to JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>

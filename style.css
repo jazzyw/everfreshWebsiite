@@ -1,0 +1,310 @@
+body {
+    background-color: rgb(203, 255, 218);
+    padding: 0;
+    line-height: 1.6;
+	margin: 0;
+	min-height: 100vh;
+    font-family: sans-serif;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+h2, h3, a {
+    color: #34495e;
+}
+
+a {
+    text-decoration: none;
+}
+
+.logo {
+    margin: 0;
+    font-size: 1.45em;
+}
+
+.main-nav {
+    margin-top: 5px;
+}
+
+.logo a, .main-nav a {
+    padding: 10px 15px;
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+}
+
+.main-nav a {
+    color: #34495e;
+    font-size: .99em;
+}
+
+.main-nav a:hover {
+    color: #718daa;
+}
+
+.header {
+    padding-top: .5em;
+    padding-bottom: .5em;
+    border: 1px solid #a2a2a2;
+    background-color: #f4f4f4;
+    /* -webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px; */
+}
+
+@media (min-width: 769px) {
+	.header,
+	.main-nav {
+		display: flex;
+	}
+	.header {
+		flex-direction: column;
+		align-items: center;
+    	.header {
+            width: 80%;
+            margin: 0 auto;
+            max-width: 1150px;
+	    }
+	}
+}
+
+@media (min-width: 1025px) {
+	.header {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+}
+
+img {
+    object-fit: cover;
+}
+
+#restaurantImg {
+    height: 780px;
+}
+
+#chef {
+    width: 550px;
+    height: 550px;
+    object-fit: cover;
+}
+
+h1 {
+    text-align: center;
+    font-size: 60px;
+}
+
+p {
+    text-align: center;
+    font-size: 32px;
+}
+
+.container {
+    max-width: 1600px;
+    padding: 50px 20px;
+    margin: 0 auto;
+}
+
+#gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+.galleryImg {
+    max-width: 100%;
+    border-radius: 10px;
+    position: relative;
+    transition: transform 250ms;
+    cursor: pointer;
+}
+
+.galleryImg:hover {
+    transform: translateY(-2px);
+    box-shadow: 3px 3px 10px black;
+}
+
+#popup {
+    /* popup will stay in one spot no matter how you scroll and take up the entire page */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* by default popup will be translated all the way up you can't see it */
+    transform: translateY(-500%);
+    transition: 250ms transform;
+    padding: 50px;
+}
+
+#selectedImage {
+    max-height: 100%;
+}
+
+/* TODO: teach fancy transition */
+span {
+    opacity: 0;
+    transition: all 0.4s ease;
+    transform: translateY(50px);
+    display: inline-block;
+}
+
+span.fade {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.section {
+    /* position: relative; */
+    /* top: 80px; */
+    opacity: 0;
+    /* height: 20vh; */
+    /* width: 40%; */
+    transition: 0.5s ease-out;
+    padding: 60px;
+}
+
+.section.active {
+    opacity: 1;
+    /* transform: translateY(-60px); */
+    transition: 0.5s ease-in;
+}
+
+/* About Me section flexbox */
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* TODO: Contact Form Styling */
+
+/* #contactForm {
+    padding-bottom: 100px;
+} */
+
+form {
+    padding: 40px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.form-group input, textarea {
+    width: 500px;
+    padding: 10px;
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+textarea {
+    width: 600px;
+    height: 200px;
+}
+
+input.invalid {
+    border: 1px solid red;
+}
+
+.error-hint {
+    color: red;
+}
+
+button {
+    margin-top: 30px;
+    padding: 10px;
+    font-size: 20px;
+    background: none;
+    border: 1px solid rgba(47, 168, 47, 0.836);
+    border-radius: 10px;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgba(47, 168, 47, 0.836);
+    border: black;
+    color: white;
+    padding: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+.thank-you {
+    padding: 40px;
+    font-size: 32px;
+    text-align: center;
+}
+
+/* Call to Action */
+.visit {
+    width: 300px;
+    height: 200px;
+    text-align: center;
+    background-color: rgb(93, 219, 129);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.visit p {
+    font-size: 18px;
+}
+
+.inline {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.close {
+    margin-top: 0;
+    margin-left: 20px;
+    padding: 0px 5px;
+}
+
+.align-right {
+    float: right;
+}
+
+.slide-in {
+    opacity: 0;
+    transition: all .5s;
+
+}
+
+.align-right.slide-in {
+    transform: translateX(50%);
+}
+
+.slide-in.active {
+    opacity: 1;
+    transform: translateX(0%);
+    float: right;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
